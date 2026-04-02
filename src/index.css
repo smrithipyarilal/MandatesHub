@@ -1,0 +1,308 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f8fc;
+  color: #111827;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.app-shell {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: #111827;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  flex-shrink: 0;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.sidebar-logo-image {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: white;
+  padding: 4px;
+}
+
+.sidebar-logo-text {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.sidebar-dropdown-wrap {
+  margin-bottom: 28px;
+}
+
+.sidebar-dropdown {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: none;
+  background: #1434a4;
+  color: white;
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sidebar-dropdown:hover {
+  background: #1434a4;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-item {
+  background: transparent;
+  border: none;
+  color: #d1d5db;
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.nav-item:hover {
+  background: #1f2937;
+  color: white;
+}
+
+.nav-item.active {
+  background: transparent;
+  color: white;
+  border: 1px solid #2563eb;
+}
+
+/* Right side */
+.main-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Topbar */
+.topbar {
+  height: 72px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  flex-shrink: 0;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 300px;
+  max-width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: #2563eb;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.profile-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f3f4f6;
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* Workspace */
+.workspace {
+  flex: 1;
+  padding: 20px;
+  background: #f7f8fc;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Content panel */
+.content-panel-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.content-panel-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  flex-shrink: 0;
+}
+
+.split-toggle {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #dbe3f0;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 44px;
+}
+
+.split-toggle-btn {
+  width: 48px;
+  height: 44px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  font-size: 18px;
+  color: #334155;
+}
+
+.split-toggle-btn:hover {
+  background: #f8fafc;
+}
+
+.split-toggle-btn.active {
+  background: #eff6ff;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+.split-divider {
+  width: 1px;
+  height: 24px;
+  background: #dbe3f0;
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.version-dropdown {
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 12px;
+  border: 1px solid #dbe3f0;
+  background: white;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+
+.upload-btn {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 12px;
+  background: #1e3a8a;
+  color: white;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.upload-btn:hover {
+  background: #1e40af;
+}
+
+.sheet-area {
+  flex: 1;
+  min-height: 0;
+  background: white;
+  border: 1px solid #dbe3f0;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.notes-area-wrapper {
+  flex: 1;
+  min-height: 0;
+  background: white;
+  border: 1px solid #dbe3f0;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.notes-area {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 18px;
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
